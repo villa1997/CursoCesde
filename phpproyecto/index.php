@@ -23,6 +23,7 @@ and open the template in the editor.
                 else{
                      echo 'soy mayor'. "<br>";
                 }
+                // -------switch------
                 switch ($Lenguaje){
                     case "PHP":
                         echo 'PHP';
@@ -34,6 +35,13 @@ and open the template in the editor.
                         echo 'HTML';
                         break;
                 }
+                // ------ ARREGLOS-----
+                echo '<br>';
+                $arreglo = [2 , "Hola", 5 ];
+                echo $arreglo [1] ;
+                print_r($arreglo)
+                //---------------------
+               // $arreglo = array ("hola", 1,"hola")
                 //echo $SegundaVariable + $SegundaVariable;
             ?>   
         </h1>
@@ -43,6 +51,28 @@ and open the template in the editor.
                     echo 'Esta es otra seccion';
                 ?>
              </h1>
-        </p>  
+        </p>
+        // ---------------imprimir areglos con posiciones las listas
+        <pre>
+            <?PHP
+                 
+                 var_dump($arreglo);
+                 echo "<br>";
+                 $arreglo [] = "phyton";
+                 var_dump($arreglo);
+                 // Arreglos asociativos
+                 $usuarios = array ('nombre' => "juan", "apellidos"=> "zabala","cedula"=>1234 );
+                 echo $usuarios . "<h1>" . $usuarios['nombre'] . "</h1>";
+                 echo 'cosa' . "<br>";
+                 // ------ validar existe o no existe 
+                 $existe = in_array("juan", array_values($usuarios));
+                 var_dump($existe);
+                 
+                 // ------ foreach
+                 foreach ($usuarios as $user){
+                     echo $user. "<br>";
+                 }
+            ?>
+        </pre>
     </body>
 </html>
