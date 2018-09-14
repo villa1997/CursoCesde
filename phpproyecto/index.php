@@ -69,10 +69,22 @@ and open the template in the editor.
                  var_dump($existe);
                  
                  // ------ foreach
-                 foreach ($usuarios as $user){
+                // foreach ($usuarios as $user){
                      echo $user. "<br>";
-                 }
+                 //}
+                 
             ?>
+             <ul>
+                 <?PHP
+                    foreach ($usuarios as $user);
+                        echo "<li>" . $user. "</li>";
+                        
+                     for ($i=0; $i<4; $i++)
+                     {
+                         echo $i;
+                     }
+                 ?>
+             </ul>
         </pre>
     </body>
 </html>
